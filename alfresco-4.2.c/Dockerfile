@@ -24,13 +24,13 @@ RUN $ALF_INSTALL_BIN \
   --unattendedmodeui none \
   --mode unattended \
   --debuglevel 2 \
-  --enable-components javaalfresco,postgres,openofficecomponent \
-  --disable-components alfrescosharepoint,alfrescogoogledocs \
-  --jdbc_url "jdbc:postgresql://localhost/alfresco?useUnicode=yes&characterEncoding=UTF-8" \
+  --enable-components javaalfresco,openofficecomponent \
+  --disable-components postgres,alfrescosharepoint,alfrescogoogledocs \
+  --jdbc_url "jdbc:postgresql://t450:5432/alfresco?useUnicode=yes&characterEncoding=UTF-8" \
   --jdbc_driver org.postgresql.Driver \
   --jdbc_database alfresco \
   --jdbc_username postgres \
-  --jdbc_password postgres \
+  --jdbc_password password \
   --alfresco_admin_password pass \
   --baseunixservice_install_as_service 0 \
   --alfrescocustomstack_services_startup demand
@@ -47,4 +47,6 @@ VOLUME /opt/alfresco/alf_data/solr/archive/SpacesStore
 
 EXPOSE 8080
 
-CMD /opt/alfresco/tomcat/bin/catalina.sh run
+ADD assets/run-alfresco.sh /opt/
+
+CMD /opt/run-alfresco.sh
