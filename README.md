@@ -8,6 +8,14 @@ I only work on 3 separate versions as those are used in my current company.
 
 * Docker toolbox if you are working on a development machine.
 * Docker machine configured with over 4GB memory and 60GB disk space.
+* A standalone running Postgres Database server.
+
+## Running
+
+It is possible to ingest Tomcat runtime configuration during Docker run, with which
+you can customise your Alfresco server.
+
+See `run.sh` files under each sub folders.
 
 ## References
 
