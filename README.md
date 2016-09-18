@@ -21,3 +21,5 @@ See `run.sh` files under each sub folders.
 
 * Alfresco Wiki - https://wiki.alfresco.com/wiki/Category:Community_Edition
 * Alfresco Tip: Unattended installation with one command - http://blyx.com/2014/02/20/alfresco-tip-unattended-installation-with-one-command/
+
+[![](https://images.microbadger.com/badges/image/cheeven/alfresco-docker.svg)](https://microbadger.com/images/cheeven/alfresco-docker "Get your own image badge on microbadger.com")
